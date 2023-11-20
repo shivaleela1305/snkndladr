@@ -53,6 +53,11 @@ public class snakeandladder {
             // if the position go below 0 then we will shift it to 0 again
             if(Pos_Player1<0){
                 Pos_Player1 = 0;
+                
+             // if the player position go above winning_position then he will stay at same position until he gets exactly winning_pos
+                if (Pos_Player1>winning_pos) {
+                    Pos_Player1 = Pos_Player1 - Dice();
+                }
             }           
         }
             
